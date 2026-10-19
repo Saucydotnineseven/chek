@@ -1,0 +1,21 @@
+{
+  "name": "clipkey-standalone-flag",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Standalone Chromium (Puppeteer) ClipKey controller with TinyMCE AI clicks. No Chrome extension is loaded.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "pm2:start": "npx --yes pm2@latest startOrRestart ecosystem.config.cjs",
+    "pm2:stop": "npx --yes pm2@latest delete clipkey-flag clipkey-updater",
+    "pm2:logs": "npx --yes pm2@latest logs clipkey-flag clipkey-updater",
+    "pm2:status": "npx --yes pm2@latest status"
+  },
+  "dependencies": {
+    "puppeteer-core": "^23.0.0",
+    "rebrowser-patches": "^1.0.19",
+    "rebrowser-puppeteer-core": "^24.8.1",
+    "ws": "^8.18.0"
+  }
+}
